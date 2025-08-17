@@ -7,7 +7,6 @@ const width = 500;
 const height = 700;
 const isMobile = window.matchMedia("(max-width: 600px)");
 const gameOverEl = document.createElement("div");
-
 // Paddle
 const paddleHeight = 10;
 const paddleWidth = 50;
@@ -179,6 +178,7 @@ function showGameOverEl(winner) {
   // Hide Canvas
   canvas.hidden = true;
   // Container
+  gameOverEl.hidden = false;
   gameOverEl.textContent = "";
   gameOverEl.classList.add("game-over-container");
   // Title
@@ -220,11 +220,10 @@ function startGame() {
   if (isGameOver && !isNewGame) {
     // play again button pressed
     canvas.hidden = false;
-    const container = document.querySelector(".game-over-container");
-    container.remove();
+    gameOverEl.remove();
   }
   isGameOver = false;
-  isNewGame = true;
+  isNewGame = false;
   playerScore = 0;
   computerScore = 0;
   ballReset();
