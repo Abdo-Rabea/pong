@@ -18,6 +18,7 @@ The goal of this project is to strengthen understanding of **canvas drawing**, *
 ## Preview
 
 [demo](https://abdo-rabea.github.io/pong)
+
 ![Pong Game Preview](./screen.png)
 
 ---
